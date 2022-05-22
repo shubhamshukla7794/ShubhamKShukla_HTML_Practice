@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Labels Form HTML</title>
+    <style>
+        label {
+            font-weight: bold;
+            display: block;
+        }
+        input[type=tel], input[type=password] {
+            border: none;
+            border-bottom: 2px solid #0073a0;
+            padding: 5px 10px;
+            margin: 10px 0;
+        }
+        input[type=tel]:focus, input[type=password]:focus {
+            border: none;
+            border-bottom: 2px solid #01384e;
+            outline: none;
+            background: transparent;
+        }
+        button {
+            background-color: #0062b3; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Input the below details</h1>
+    <hr>
+
+   
+    <form action="/login" method="post">
+        <label for="phone">Phone Number</label>
+        <input type="tel" name="phone" id="phone" required>
+        
+        <br>
+        <br>
+
+        <label for="otp">OTP</label>
+        <input type="password" name="otp" id="otp" pattern="[0-9]{6}" required>
+    
+        <br>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
